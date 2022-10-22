@@ -1,0 +1,18 @@
+﻿@page "/"
+
+<MonacoEditor Id="any-id-string" ConstructionOptions="GetOptions" CssClass="code-editor" />
+
+@code {
+    private StandaloneEditorConstructionOptions GetOptions(MonacoEditor editor) => new()
+        {
+            AutomaticLayout = true,
+            Language = "javascript",
+            Value = "function xyz() {\n" +
+                    "   console.log(\"Hello world!\");\n" +
+                    "}",
+            Minimap = new EditorMinimapOptions
+            {
+                Enabled = false
+            }
+        };
+}
