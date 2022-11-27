@@ -1,5 +1,9 @@
 ﻿@page "/"
 
+<Tooltip Text="Tooltip text">
+    <Button>XXX</Button>
+</Tooltip>
+
 <MonacoEditor Id="any-id-string" ConstructionOptions="GetOptions" CssClass="code-editor" />
 
 @code {
@@ -7,9 +11,7 @@
         {
             AutomaticLayout = true,
             Language = "javascript",
-            Value = "function xyz() {\n" +
-                    "   console.log(\"Hello world!\");\n" +
-                    "}",
+            Value = "function xyz() {\n   console.log(\"Hello world!\");\n}",
             Minimap = new EditorMinimapOptions
             {
                 Enabled = false
